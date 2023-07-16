@@ -1,0 +1,41 @@
+{
+    "Navbar": {
+      "home": "Home",
+      "pricing": "Pricing",
+      "contact": "Contact",
+      "dashboard": "Dashboard",
+      "signin": "Sign In",
+      "signout": "Sign Out"
+    },
+    "Locale": {
+      "locale": "Locale"
+    },
+    "Login": {
+      "title": "Login",
+      "email": "Email",
+      "placeholderEmail": "Enter your email",
+      "password": "Password",
+      "placeholderPassword": "Enter your password",
+      "orUse": "or use",
+      "login": "Login",
+      "noAccount": "No account yet ?",
+      "signUp": "Sign up"
+    },
+    "Register": {
+      "title": "Register",
+      "name": "Name",
+      "placeholderName": "Enter your name",
+      "email": "Email",
+      "placeholderEmail": "Enter your email",
+      "password": "Password",
+      "placeholderPassword": "Choose a password",
+      "cpassword": "Confirm password",
+      "placeholderCPassword": "Confirm your password",
+      "orUse": "or use",
+      "confirm": "Confirm the ",
+      "rules": "terms of use",
+      "register": "Register",
+      "haveAccount": "You have an account ?",
+      "signIn": "Sign In"
+    }
+}

@@ -1,0 +1,41 @@
+{
+    "Navbar": {
+      "home": "Accueil",
+      "pricing": "Tarifs",
+      "contact": "Contact",
+      "dashboard": "Tableau de bord",
+      "signin": "Connexion",
+      "signout": "Déconnexion"
+    },
+    "Locale": {
+      "locale": "Langue"
+    },
+    "Login": {
+      "title": "Connexion",
+      "email": "Mail",
+      "placeholderEmail": "Entrez votre mail",
+      "password": "Mot de passe",
+      "placeholderPassword": "Entrez votre mot de passe",
+      "orUse": "ou",
+      "login": "Se connecter",
+      "noAccount": "Pas de compte ?",
+      "signUp": "S'inscrire"
+    },
+    "Register": {
+      "title": "Inscription",
+      "name": "Nom",
+      "placeholderName": "Entrez votre nom",
+      "email": "Mail",
+      "placeholderEmail": "Entrez votre mail",
+      "password": "Mot de passe",
+      "placeholderPassword": "Choisissez un mot de passe",
+      "cpassword": "Confirmer votre mot de passe",
+      "placeholderCPassword": "Confirmez votre mot de passe",
+      "orUse": "ou",
+      "confirm": "Accepter les",
+      "rules": "conditions d'utilisation",
+      "register": "S'inscrire",
+      "haveAccount": "Vous avez déjà un compte ?",
+      "signIn": "Se connecter"
+    }
+}

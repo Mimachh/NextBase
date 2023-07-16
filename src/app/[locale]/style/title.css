@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+
+.font-akaya {
+    font-family: 'Akaya Telivigala', cursive;
+}
+
+.title {
+    transition: color 0.3s ease;
+    cursor: pointer;
+    
+    
+}
+.title:hover {
+    color: var(--primary);
+    animation: gelatine 0.5s ease;
+}
+
+.title-forth-letter {
+    color: var(--primaryDark);
+    
+}
+
+.title-first-letter {
+    color: var(--primaryDark);
+    /* font-family: 'Akaya Telivigala', cursive; */
+}
+
+.title-first-letter:hover {
+    color: var(--primaryDark);
+    color: var(--primary);
+}
+
+.title-forth-letter:hover {
+    color: var(--primary);
+}
+
+@keyframes gelatine {
+    from, to { transform: scale(1, 1); }
+    25% { transform: scale(0.9, 1.1); }
+    50% { transform: scale(1.1, 0.9); }
+    75% { transform: scale(0.95, 1.05);}
+    100% { transform: scale(1, 1);}
+}

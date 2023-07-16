@@ -1,0 +1,48 @@
+-- CreateTable
+CREATE TABLE `Post` (
+    `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `createdAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+    `updatedAt` DATETIME(3) NOT NULL,
+    `published` BOOLEAN NOT NULL DEFAULT false,
+    `title` VARCHAR(255) NOT NULL,
+    `authorId` VARCHAR(191) NULL,
+
+    PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+-- CreateTable
+CREATE TABLE `Key` (
+    `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `key` VARCHAR(191) NOT NULL,
+    `active` BOOLEAN NOT NULL DEFAULT true,
+    `userId` VARCHAR(191) NOT NULL,
+
+    UNIQUE INDEX `Key_userId_key`(`userId`),
+    PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+-- CreateTable
+CREATE TABLE `TelegramAccount` (
+    `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `description` VARCHAR(191) NOT NULL,
+    `chat_id` VARCHAR(191) NOT NULL,
+    `bot_token` VARCHAR(191) NOT NULL,
+    `userId` VARCHAR(191) NOT NULL,
+    `keyId` INTEGER NOT NULL,
+
+    UNIQUE INDEX `TelegramAccount_userId_key`(`userId`),
+    UNIQUE INDEX `TelegramAccount_keyId_key`(`keyId`),
+    PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+-- AddForeignKey
+ALTER TABLE `Post` ADD CONSTRAINT `Post_authorId_fkey` FOREIGN KEY (`authorId`) REFERENCES `User`(`id`) ON DELETE SET NULL ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE `Key` ADD CONSTRAINT `Key_userId_fkey` FOREIGN KEY (`userId`) REFERENCES `User`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE `TelegramAccount` ADD CONSTRAINT `TelegramAccount_userId_fkey` FOREIGN KEY (`userId`) REFERENCES `User`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE `TelegramAccount` ADD CONSTRAINT `TelegramAccount_keyId_fkey` FOREIGN KEY (`keyId`) REFERENCES `Key`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;

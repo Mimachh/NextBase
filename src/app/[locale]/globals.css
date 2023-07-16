@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #1DA1F2;
+  --primaryDark: #58E6D9;
+}
+
+html.dark {
+  --primary: #58E6D9;
+  --primaryDark: #1DA1F2;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #58E6D9;
+  }
+} */

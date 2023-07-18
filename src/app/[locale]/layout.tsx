@@ -1,4 +1,4 @@
-'use client'
+
 import './globals.css'
 import type { Metadata } from 'next'
 
@@ -9,11 +9,15 @@ import Background from './components/Background'
 
 import Providers from './providers'
 import ToasterContext from './context/ToasterContext'
-import { SessionProvider } from 'next-auth/react';
 
+import SessionContext from './context/SessionContext'
 import {NextIntlClientProvider} from 'next-intl';
 import {notFound} from 'next/navigation';
 import LangSwitcher from './components/Links/LangSwitcher'
+
+
+import { SessionProvider } from 'next-auth/react'; // J'avais ça qui entourait tout le site
+
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -44,11 +48,13 @@ export default async function RootLayout({
   } catch (error) {
     notFound();
   }
+  
 
   return (
-    <SessionProvider>
-      <NextIntlClientProvider locale={locale} messages={messages}>
-    <html >
+    <SessionContext>
+      {/* <NextIntlClientProvider locale={locale} messages={messages}> */}
+    <html lang={locale}>
+       <NextIntlClientProvider locale={locale} messages={messages}>
         <body className={`${poppins.className} dark:bg-dark bg-light`}>
           
           <main>
@@ -57,14 +63,15 @@ export default async function RootLayout({
               <Navbar />
               <ToasterContext/>
               <ThemeSwitcher />
-              <LangSwitcher className='fixed right-3 bottom-20'/>
+              <LangSwitcher className='fixed md:bottom-12 md:right-0 right-3 bottom-20'/>
               
               {children}
             </Providers>
           </main>
         </body>
+        </NextIntlClientProvider>
     </html>
-    </NextIntlClientProvider>
-    </SessionProvider>
+    {/* </NextIntlClientProvider> */}
+    </SessionContext>
   )
 }

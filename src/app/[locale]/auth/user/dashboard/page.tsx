@@ -5,7 +5,7 @@ const DashboardPage = () => {
 
   return (
     <div>
-      Dashboard
+    Page par défaut
     </div>
   );
 };

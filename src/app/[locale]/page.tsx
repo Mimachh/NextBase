@@ -1,5 +1,3 @@
-
-
 import Title from "./components/Texts/Title";
 import type { Metadata } from 'next'
 

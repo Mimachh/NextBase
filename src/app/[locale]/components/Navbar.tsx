@@ -2,7 +2,6 @@
 
 import React, { useState, useRef } from 'react'
 
-// import {TwitterIcon, GithubIcon, LinkedInIcon, PinterestIcon, DribbbleIcon, SunIcon, MoonIcon } from './Icons'
 import {motion} from "framer-motion"
 import { CustomLink } from './Links/CustomLink';
 import CustomMobileLink from './Links/CustomMobileLink';
@@ -12,7 +11,7 @@ import useOnClickOutsideSSR from "use-onclickoutside-ssr";
 import '../style/logo.css'
 import SigninButton from './Buttons/SigninButton';
 import SignInButtonMobile from './Buttons/SignInButtonMobile';
-// import Link from 'next/link';
+
 import { useSession } from 'next-auth/react'
 
 import Link from 'next-intl/link';
@@ -40,7 +39,7 @@ const NavBar = () => {
 
   return (
     <header className='w-full px-32 py-8 font-medium flex items-center justify-between
-    dark:text-light relative z-10 lg:px-16 md:px-12 sm:px-8'>
+    dark:text-light relative z-30 md:z-10 lg:px-16 md:px-12 sm:px-8'>
 
 
         <button 
@@ -68,7 +67,7 @@ const NavBar = () => {
         <div className='flex justify-between items-center lg:hidden'>
             <nav>
                 <CustomLink href="/" title={t('home')} className='mr-4' />
-                <CustomLink href="/about2" title={t('pricing')} className='mx-4'/>
+                <CustomLink href="/products" title={t('pricing')} className='mx-4'/>
                 <CustomLink href="/about2" title={t('contact')} className='mx-4'/>
                 <CustomLink href="/userpost" title="Post" className='msx-4'/>
                 {/* <Link href="/" locale="en">Switch to German</Link> */}
@@ -89,17 +88,17 @@ const NavBar = () => {
             ref={ref}
             initial={{scale:0, opacity:0, x:"-50%", y:"-50%"}}
             animate={{scale:1, opacity:1}}
-            className='min-w-[70vw] z-30 flex flex-col justify-between items-center fixed top-1/2 left-1/2 
+            className='min-w-[70vw]  flex flex-col justify-between items-center fixed top-1/2 left-1/2 
             -translate-x-1/2 -translate-y-1/2 bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-32'>
                 <nav className='flex items-center flex-col justify-center'>
-                    <CustomMobileLink href="/" title="Home" className='' toggle={handleClick} setIsOpen={setIsOpen}/>
-                    <CustomMobileLink href="/about2" title="About" className=''toggle={handleClick}/>
-                    <CustomMobileLink href="/projects" title="Projects" className=''toggle={handleClick}/>
+                    <CustomMobileLink href="/" title={t('home')} className='' toggle={handleClick}/>
+                    <CustomMobileLink href="/products" title={t('pricing')} className=''toggle={handleClick}/>
+                    <CustomMobileLink href="/" title={t('contact')} className=''toggle={handleClick}/>
                     {session && session.user ? (
-                        <CustomMobileLink href="/auth/user/dashboard" title="Dashboard" className=''toggle={handleClick}/>
+                        <CustomMobileLink href="/auth/user/dashboard"  title={t('dashboard')} className='' toggle={handleClick}/>
                     ) : null}
                     
-                    <SignInButtonMobile className=''/>
+                    <SignInButtonMobile className='' toggle={handleClick}/>
                 </nav>
             </motion.div> 
             : null

@@ -1,5 +1,148 @@
 import * as React from "react";
 
+export const Checked = ({ className ="", ...rest }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={2}
+    viewBox="0 0 24 24"
+    {...rest}
+    className={`w-5 h-5 ${className}`}
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" d="m5 13 4 4L19 7" />
+  </svg>
+)
+
+
+export const ChevronSimple = ({ className ="", ...rest }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={48}
+    height={48}
+    fill="none"
+    stroke="#2329D6"
+    strokeLinecap="square"
+    aria-labelledby="chevronDownIconTitle"
+    color="#2329D6"
+    viewBox="0 0 24 24"
+    {...rest}
+    className={`w-7 h-7 ${className}`}
+  >
+    <title />
+    <path d="m6 10 6 6 6-6" />
+  </svg>
+)
+
+export const ChevronsDouble = ({ className ="", ...rest }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 20 20"
+    {...rest}
+    className={`w-10 h-10 ${className}`}
+  >
+    <path
+      fill="currentColor"
+      fillRule="evenodd"
+      d="M2.293 15.293a1 1 0 1 0 1.414 1.414l6-6a1 1 0 0 0 0-1.414l-6-6a1 1 0 0 0-1.414 1.414L7.586 10l-5.293 5.293zm8 0a1 1 0 1 0 1.414 1.414l6-6a1 1 0 0 0 0-1.414l-6-6a1 1 0 1 0-1.414 1.414L15.586 10l-5.293 5.293z"
+    />
+  </svg>
+)
+
+
+export const CloseButton = ({ className ="", ...rest }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    xmlSpace="preserve"
+
+    viewBox="0 0 128 128"
+    {...rest}
+    className={`w-6 h-6 ${className}`}
+  >
+    <circle
+      cx={64}
+      cy={64}
+      r={64}
+      style={{
+        fill: "#c93636",
+      }}
+    />
+    <path
+      d="M100.3 90.4 73.9 64l26.3-26.4c.4-.4.4-1 0-1.4l-8.5-8.5c-.4-.4-1-.4-1.4 0L64 54.1 37.7 27.8c-.4-.4-1-.4-1.4 0l-8.5 8.5c-.4.4-.4 1 0 1.4L54 64 27.7 90.3c-.4.4-.4 1 0 1.4l8.5 8.5c.4.4 1.1.4 1.4 0L64 73.9l26.3 26.3c.4.4 1.1.4 1.5.1l8.5-8.5c.4-.4.4-1 0-1.4z"
+      style={{
+        fill: "#fff",
+      }}
+    />
+  </svg>
+)
+
+export const HomeIcon = ({ className ="", ...rest }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={24}
+    height={24}
+    fill="none"
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={2}
+    {...rest}
+    className={`w-7 h-7 ${className}`}
+  >
+    <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+    <path d="M9 22V12h6v10" />
+  </svg>
+)
+
+export const KeyIcon = ({ className ="", stroke= "", ...rest }) => (
+  <svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  viewBox="0 0 256 256" 
+  {...rest}
+  className={`w-7 h-7 ${className}`}
+  >
+    <path fill="none" d="M0 0h256v256H0z" />
+    <path
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={16}
+      d="M93.2 122.8A70.3 70.3 0 0 1 88 96a72 72 0 1 1 72 72 70.3 70.3 0 0 1-26.8-5.2h0L120 176H96v24H72v24H32v-40l61.2-61.2Z"
+    />
+    <circle cx={180} cy={76} r={12} />
+  </svg>
+)
+
+export const ProfileIcon = ({ className ="", ...rest }) => (
+  <svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  viewBox="0 0 32 32" 
+  {...rest}
+  className={`w-6 h-7 ${className}`}
+  >
+    <title />
+    <path d="M16 16a7 7 0 1 0-7-7 7 7 0 0 0 7 7Zm0-12a5 5 0 1 1-5 5 5 5 0 0 1 5-5ZM17 18h-2A11 11 0 0 0 4 29a1 1 0 0 0 1 1h22a1 1 0 0 0 1-1 11 11 0 0 0-11-11ZM6.06 28A9 9 0 0 1 15 20h2a9 9 0 0 1 8.94 8Z" />
+  </svg>
+)
+
+export const CreditCardIcon = ({ className ="", ...rest }) => (
+  <svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  viewBox="0 0 64 64" 
+  {...rest}
+  className={`w-7 h- ${className}`}
+  >
+    <g data-name="38 credit card">
+      <path d="M55.5 15.21h-47a5.008 5.008 0 0 0-5 5v23.58a5.008 5.008 0 0 0 5 5h47a5.008 5.008 0 0 0 5-5V20.21a5.008 5.008 0 0 0-5-5Zm3 28.58a3.009 3.009 0 0 1-3 3h-47a3.009 3.009 0 0 1-3-3V27.4h53Zm0-18.39h-53v-2.08h53Zm0-4.08h-53v-1.11a3.009 3.009 0 0 1 3-3h47a3.009 3.009 0 0 1 3 3Z" />
+      <path d="M48.3 30.49a6.074 6.074 0 0 0-3.58 1.16 5.986 5.986 0 0 0-3.55-1.16 6.1 6.1 0 1 0 3.55 11.03 6.095 6.095 0 1 0 3.58-11.03Zm-7.13 10.19a4.1 4.1 0 1 1 4.09-4.1 4.106 4.106 0 0 1-4.09 4.1Zm7.13 0a4.069 4.069 0 0 1-2.14-.61 6.071 6.071 0 0 0 0-6.97 4.092 4.092 0 1 1 2.14 7.58ZM10.611 36.564h8.148a1 1 0 0 0 0-2h-8.148a1 1 0 1 0 0 2ZM20.8 38.639H10.611a1 1 0 1 0 0 2H20.8a1 1 0 0 0 0-2Z" />
+    </g>
+  </svg>
+)
+
+
+
 export const GithubIcon = ({ className, ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +184,7 @@ export const TwitterIcon = ({ className = '', ...rest }) => (
     height="1em"
     viewBox="0 0 256 209"
     {...rest}
-    className={`w-full h-auto ${className}`}
+    className={`w-full h-auto ${className} `}
   >
     <path fill="none" d="M0 0h256v209H0z" />
     <path

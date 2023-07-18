@@ -20,7 +20,7 @@ const ThemeSwitcher = () => {
             <button onClick={() => setTheme(theme === "light" ? "dark" : "light" )}
                 className={`rounded-full p-2 border border-primaryDark dark:border-white
                 ${theme === "light" ? "bg-primaryDark text-light" : "bg-light text-primary"}
-                fixed bottom-0 right-0 mr-4 mb-4
+                fixed bottom-0 right-0 mr-4 mb-4 md:mr-0 md:mb-0 z-30
                 `}
                 >
                     {

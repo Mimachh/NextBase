@@ -2,6 +2,7 @@
 import { useSession, signIn, signOut } from 'next-auth/react'
 import React from 'react'
 import {usePathname} from 'next-intl/client';
+import Link from 'next-intl/link';
 interface CustomLinkProps {
     className?: string;
 }
@@ -35,7 +36,7 @@ const SigninButton = ({className=""}: CustomLinkProps) => {
     }
   return (
              
-        <button onClick={()=>signIn()}
+        <Link href={'auth/signIn'}
         className={`${className} relative group`}
         >
         {t('signin')}
@@ -46,7 +47,7 @@ const SigninButton = ({className=""}: CustomLinkProps) => {
             ${pathName === '/auth/signIn' ? 'w-full' : 'w-0'}
             dark:bg-primary`}>&nbsp;
         </span>
-        </button>
+        </Link>
   
   )
 }

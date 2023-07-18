@@ -65,7 +65,7 @@ const RegisterPage = () => {
   return (
     <div
       className={
-        "xs:block xs:px-4 flex flex-col items-center justify-center w-full  fixed top-1/2 -translate-y-1/2"
+        "xs:px-4 flex flex-col items-center justify-center w-full  fixed top-1/2 -translate-y-1/2 md:block md:relative md:-translate-y-0 md:mb-16"
       }
     >
 

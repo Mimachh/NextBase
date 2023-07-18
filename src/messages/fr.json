@@ -37,5 +37,11 @@
       "register": "S'inscrire",
       "haveAccount": "Vous avez déjà un compte ?",
       "signIn": "Se connecter"
+    },
+    "Sidebar": {
+      "home": "Accueil",
+      "keys": "Mes clés API",
+      "subscribe": "Mes abonnements",
+      "profile": "Mon profil"
     }
 }

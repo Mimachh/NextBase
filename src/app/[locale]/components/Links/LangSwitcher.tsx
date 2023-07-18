@@ -5,6 +5,7 @@ import {useLocale, useTranslations} from 'next-intl';
 import {usePathname} from 'next-intl/client';
 import {ChangeEvent, useTransition, useState, useRef, useEffect } from 'react';
 import clsx from 'clsx';
+import { ChevronSimple } from '../Icons';
 interface LangSwitcherProps {
   link: string;
 }
@@ -50,7 +51,7 @@ const LangSwitcher = ({className = ""}) => {
   }, []);
 
   return (
-    <div className={`${className} inline-block z-10 `}>
+    <div className={`${className} inline-block z-30 `}>
       <label
         className={clsx(
           'relative',
@@ -59,7 +60,7 @@ const LangSwitcher = ({className = ""}) => {
       >
         <p className="sr-only">{t('locale')}</p>
         <select 
-          className="cursor-pointer bg-primaryDark dark:bg-primary text-dark dark:text-light inline-flex appearance-none outline:none focus:none rounded-md py-2 pl-2 pr-6 "
+          className="cursor-pointer bg-primaryDark dark:bg-primary text-dark dark:text-light inline-flex appearance-none outline:none focus:none rounded-md py-2 pl-2 pr-6 md:py-1 md:pr-4"
           defaultValue={locale}
           disabled={isPending}
           onChange={onSelectChange}
@@ -70,7 +71,9 @@ const LangSwitcher = ({className = ""}) => {
             </option>
           ))}
         </select>
-        <span className="text-dark dark:text-light pointer-events-none absolute -top-1 right-2">⌄</span>
+        <span className="text-dark dark:text-light pointer-events-none absolute -top-1 right-1">
+          <ChevronSimple className='dark:stroke-light stroke-dark md:w-5'/>
+          </span>
       </label>
     </div>
   );
